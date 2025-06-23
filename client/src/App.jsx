@@ -3,6 +3,7 @@ import {Routes,Route} from 'react-router-dom'
 import Register from './components/Register.jsx'
 import Login from './components/Login.jsx'
 import Dashboard from './components/Dashboard.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 function App() {
   
@@ -13,7 +14,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='*' element={<h3>Page not found</h3>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route
+        path='/dashboard'
+        element={
+          <ProtectedRoute>
+            <Dashboard/>
+          </ProtectedRoute>
+        }
+        />
       </Routes>
    </div>
   )

@@ -25,3 +25,22 @@ export const getExpenses = async (req,res)=>{
         res.status(500).json({error:err.message})
     }
 }
+
+export const deleteExpense = async (req,res)=>{
+    const{id} = req.params
+
+    try {
+        const expense = await Expense.findById(id);
+        if(!expense){
+            return res.status(404).json({msg:"Expence not found"})
+        }
+        if(expense.user.toString() !==req.user){
+            return res.status(403).json({msg:"Not Authorized"})
+        }
+
+        await Expense.findByIdAndDelete(id);
+        res.json({msg:"Deleted"})
+    } catch (err) {
+        res.status(500).json({error:err.message})
+    }
+}

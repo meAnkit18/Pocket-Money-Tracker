@@ -1,5 +1,7 @@
 import React,{ useEffect,useState} from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Dashboard = ()=>{
@@ -32,6 +34,19 @@ const Dashboard = ()=>{
         fetchExpenses();
     }
 
+    const deleteExpense = async (id)=>{
+        await axios.delete(`http://localhost:5000/api/expenses/${id}`,{
+            headers:{Authorization:token},
+        })
+        fetchExpenses();
+    }
+
+    const navigate = useNavigate();
+
+    const handleLogout =()=>{
+        localStorage.removeItem('token')
+        navigate('/login');
+    }
 
     const total = expenses.reduce((sum,item)=>sum + item.amount,0);
 
@@ -39,6 +54,7 @@ const Dashboard = ()=>{
         <>
         <div>
             <h2>Dashboard</h2>
+            <button onClick={handleLogout} style={{float:'right'}}>Logout</button>
              <h3>Total Spent: ₹{total}</h3>
            
             <form onSubmit={handleSubmint}>
@@ -64,8 +80,8 @@ const Dashboard = ()=>{
              <ul>
                 {expenses.map((item) => (
                     <li key={item._id}>
-                        ₹{item.amount} - {item.description} ({new Date(item.data).toLocaleString()})
-
+                        ₹{item.amount} - {item.description} ({new Date(item.date).toLocaleString()})
+                        <button onClick={()=> deleteExpense(item._id)}>Delete</button>
                     </li>
                 ))}
             </ul>

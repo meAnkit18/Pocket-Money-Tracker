@@ -19,7 +19,7 @@ const Login = ()=>{
             const res = await axios.post('http://localhost:5000/api/auth/login',form);
             localStorage.setItem('token',res.data.token)
             navigate('/dashboard')
-            alert('Login successful!'); 
+            // alert('Login successful!'); 
         } catch (err) {
             alert(err.response.data.msg || 'Error logging in');
         }
