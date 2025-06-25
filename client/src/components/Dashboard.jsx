@@ -78,7 +78,7 @@ const Dashboard = ()=>{
             <h2 className='mt-4 font-semibold text-2xl'>Hii, <span className="text-3 font-semibold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-transparent bg-clip-text inline-block">{userName}</span> 😃</h2>
             <button onClick={handleLogout} style={{float:'right'}} className="text-red-500">Logout</button>
             </div>
-            <div className='bg-yellow-100 mb-4 text-2xl w-2/3 rounded-full p-3 mt-3 text-center border-2' style={{float:'right'}}>
+            <div className='bg-yellow-100 mb-4 text-2xl w-.15 rounded-full p-3 mt-3 text-center border-2' style={{float:'right'}}>
              <h3 >Total Spent: <span className='text-red-500 font-bold'>₹{total}</span></h3>
 
             </div>
