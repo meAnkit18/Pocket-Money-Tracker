@@ -26,17 +26,24 @@ const Register = ()=>{
     }
 
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
-                <h2>Registration</h2>
-                <input name='name' placeholder='Enter your name' onChange={handleChange} required />
+        <div className="flex h-screen items-center justify-center bg-grey-300 ">
+            <form onSubmit={handleSubmit} className='w-full max-w-md p-8 bg-white rounded-lg shadow-lg'>
+                <h2 className='text-2xl font-semibold mb-5 text-center'>Registration</h2>
+                <label htmlFor="" className='block mb-2 font-semibold mt-4'>Username</label>
+                <input name='name' placeholder='Enter your name' onChange={handleChange} required 
+                className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 <br />
-                <input name='email' placeholder='Enter your email' onChange={handleChange} required />
+                <label htmlFor="" className='block mb-2 font-semibold mt-4'>Email</label>
+                <input name='email' placeholder='Enter your email' onChange={handleChange} required 
+                className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 <br />
-                <input name='password' placeholder='Enter your password' onChange={handleChange} required />
+                <label htmlFor="" className='block mb-2 font-semibold mt-4'>Password</label>
+                <input name='password' placeholder='Enter your password' onChange={handleChange} required
+                className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                type='password'/>
                 <br />
-                <button type='submit'>Register</button>
-                <p>Aleady Registered? <Link to="/login">login</Link></p>
+                <button type='submit' className='w-full text-center font-semibold bg-blue-600 mt-4 p-2 text-white rounded-xl focus: ring-2 hover: bg-blue-900 duration-300'>Register</button>
+                <p className='mt-4'>Aleady Registered? <Link to="/login" className='underline text-blue-500'>login</Link></p>
             </form>
         </div>
     )
