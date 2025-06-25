@@ -32,7 +32,7 @@ const Dashboard = ()=>{
     const token = localStorage.getItem('token');
 
     const fetchExpenses = async ()=>{
-        const res = await axios.get('http://localhost:5000/api/expenses',{
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/expenses`,{
             headers:{Authorization:token},
         })
         setExpenses(res.data);
@@ -48,7 +48,7 @@ const Dashboard = ()=>{
 
     const handleSubmint = async (e)=>{
         e.preventDefault()
-        await axios.post('http://localhost:5000/api/expenses',form,{
+        await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/expenses`,form,{
             headers:{Authorization:token},
         })
         setForm({amount:'', description:''})
@@ -56,7 +56,7 @@ const Dashboard = ()=>{
     }
 
     const deleteExpense = async (id)=>{
-        await axios.delete(`http://localhost:5000/api/expenses/${id}`,{
+        await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/expenses/${id}`,{
             headers:{Authorization:token},
         })
         fetchExpenses();
