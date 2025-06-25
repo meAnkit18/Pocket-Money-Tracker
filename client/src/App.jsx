@@ -11,7 +11,7 @@ function App() {
 
   return (
    <div style={{padding:'20px'}}className="">
-    <div className="text-3xl font-bold text-center rounded-br-full shadow-lg p-4 ">
+    <div className="text-3xl bg-amber-950 font-bold text-center rounded-br-full shadow-lg p-4 ">
 
       <h1 
       className="text-3 font-bold bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-transparent bg-clip-text inline-block"
