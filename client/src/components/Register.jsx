@@ -42,7 +42,7 @@ const Register = ()=>{
                 className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                 type='password'/>
                 <br />
-                <button type='submit' className='w-full text-center font-semibold bg-blue-600 mt-4 p-2 text-white rounded-xl focus: ring-2 hover: bg-blue-900 duration-300'>Register</button>
+                <button type='submit' className='w-full text-center font-semibold bg-blue-600 mt-4 p-2 text-white rounded-xl focus:ring-2 hover:bg-blue-900 duration-300 transition transform active:scale-95'>Register</button>
                 <p className='mt-4'>Aleady Registered? <Link to="/login" className='underline text-blue-500'>login</Link></p>
             </form>
         </div>

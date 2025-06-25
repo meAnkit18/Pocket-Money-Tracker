@@ -38,7 +38,7 @@ const Login = ()=>{
                 <input name='password' type='password' placeholder='Enter your Password' onChange={handleChange} required
                 className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
                 <br />
-                <button type='submit' className='w-full text-center font-semibold bg-blue-600 mt-4 p-2 text-white rounded-xl focus: ring-2 hover: bg-blue-900 duration-300'>Login</button>
+                <button type='submit' className='w-full text-center font-semibold bg-blue-600 mt-4 p-2 text-white rounded-xl focus:ring-2 hover:bg-blue-900 duration-300 transition transform active:scale-95'>Login</button>
                 <p className='mt-4'>Not Registered Yet? <Link to="/" className='underline text-blue-500'>Register</Link></p>
             </form>
         </div>
