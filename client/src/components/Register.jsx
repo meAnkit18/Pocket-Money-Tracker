@@ -34,7 +34,7 @@ const Register = ()=>{
                 className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 <br />
                 <label htmlFor="" className='block mb-2 font-semibold mt-4'>Email</label>
-                <input name='email' placeholder='Enter your email' onChange={handleChange} required 
+                <input name='email' placeholder='Enter your email' type='email' onChange={handleChange} required 
                 className="w-full p-3 border border-grey-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"/>
                 <br />
                 <label htmlFor="" className='block mb-2 font-semibold mt-4'>Password</label>

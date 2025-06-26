@@ -104,11 +104,11 @@ const Dashboard = ()=>{
               />
               <br />
               <button 
-  type='submit' 
-  className='bg-green-500 text-white w-full text-2xl font-semibold p-1 rounded transition transform active:scale-95 hover:bg-green-600 duration-200'
->
-  Add
-</button>
+                    type='submit' 
+                    className='bg-green-500 text-white w-full text-2xl font-semibold p-1 rounded transition transform active:scale-95 hover:bg-green-600 duration-200'
+                    >
+                    Add
+                 </button>
 
             </form>
             <h2 className='text-2xl font-semibold text-center shadow-lg rounded-b-full mt-5'>Record</h2>
