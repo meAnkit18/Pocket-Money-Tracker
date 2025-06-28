@@ -21,7 +21,7 @@ if (typeof token === 'string' && token.trim() !== '') {
   
 }
 
-const userName = user?.name || 'Guest';
+const userName = user?.name || 'Welcome';
 
 
 
@@ -116,7 +116,7 @@ const Dashboard = ()=>{
                 {expenses.map((item) => (
                     <li key={item._id} className='p-2 text-center'>
                         <span className='text-green-500' style={{float:'left'}}>₹{item.amount} </span>  {item.description} ({new Date(item.date).toLocaleString()})
-                        <button onClick={()=> deleteExpense(item._id)} className='bg-black-500 rounded p-1' style={{float:'right'}} >⛔</button>
+                        <button onClick={()=> deleteExpense(item._id)} className='bg-black-500 rounded p-1 transition transform active:scale-95' style={{float:'right'}} >⛔</button>
                     <hr />
                     </li>
                 ))}
