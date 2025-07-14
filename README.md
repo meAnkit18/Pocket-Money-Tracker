@@ -142,5 +142,12 @@ This project was built as part of my learning journey to understand how full-sta
 Thanks to the amazing developer community and open-source contributors for sharing so much knowledge 🙏
 
 ---
+## 📄 License
+
+This project is licensed under the **MIT License** —  
+you are free to use, modify, and distribute it with proper attribution.
+
+🔗 See the full license text in the [LICENSE](LICENSE) file.
+
 
 > Feel free to fork, contribute, or just give feedback. I'd love to connect with fellow devs!
